@@ -1,0 +1,68 @@
+.static-positioning{
+    position: static;
+    left: 20%;
+    background-color: #667eea;
+    color: white;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+.relative-positioning{
+    position: relative;
+    left: 20%;
+    background-color: #6c1baf;
+    color: white;
+    width: 200px;
+    height: 200px;
+    left: 20%;
+    top: 20px;
+    margin-bottom: 50px;
+}
+
+.relative-positioning2{
+    position: relative;
+    left: 20%;
+    background-color: #ff0000;
+    color: white;
+    width: 200px;
+    height: 200px;
+    left: 20%;
+    top: 20px;
+    margin-bottom: 50px;
+}
+
+.absolute-positioning{
+    position: static;
+    left: 400px;
+    background-color: yellow;
+    color: black;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+.fixed-positioning{
+    background-color: green;
+    color: white;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 45%;
+    right: 200px;
+    z-index: 1000;
+}
+
+.sticky-positioning{
+    width: 100%;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.container3{
+    height: 3000px;
+    background-color: blue;
+}
