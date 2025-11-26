@@ -163,3 +163,97 @@ body{
     transition: transform 1s ease-out;
     transform: perspective(100px) rotateX(50deg);
 }
+
+.transition-basic{
+    transition: all 1s ease;
+}
+
+.transition-basic:hover{
+    background: linear-gradient(45deg, #c6f216, #1f3dc3);
+    transform: scale(1.3);
+}
+
+.transition-delay{
+    transition: all 1s ease-in 0.5s;
+}
+
+.transition-delay:hover{
+    background: linear-gradient(45deg, #c6f216, #1f3dc3);
+    transform: translateY(-10px);
+}
+
+.transition-timing{
+    transition: all 1s ease-in 0.5s;
+}
+
+.transition-timing:hover{
+    background: linear-gradient(45deg, #c6f216, #1f3dc3);
+    transform: rotate(360deg) scale(1.3);
+}
+
+.animation-bounce{
+    animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.animation-pulse{
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse{
+  
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);  
+}}
+
+.animation-spin{
+    animation: spin 2s linear;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.opacity-transition{
+    transition: opacity 1s transform ease;
+}
+
+.opacity-transition:hover{
+    opacity: 0.5;
+    transform: translateY(-10px);
+}
+
+.color-transition{
+    transition: color 1s ease;
+}
+
+.color-transition:hover{
+    color: red;
+}
+
+.size-transition{
+    transition: color 1s ease;
+}
+
+.size-transition:hover{
+    font-size: 30px;
+}
