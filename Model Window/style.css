@@ -1,0 +1,57 @@
+/* МОДАЛ (оверлей) */
+.modal {
+  position: fixed;       /* Это фиксация */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;          /* центрирование */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;          
+}
+
+/* Затемняющая подложка */
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* полупрозрачная */
+  z-index: 1;
+}
+
+/* Содержимое модального окна */
+.modal-content {
+  position: relative;
+  z-index: 2;             
+  background: #fff;
+  padding: 24px 28px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;        /* адаптивность */
+  box-sizing: border-box;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+  font-size: 16px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.modal-content p {
+  margin: 0;
+  color: #555;
+}
+
+/* адаптация под мобилки  */
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 20px 18px;
+    border-radius: 14px;
+  }
+}
+
