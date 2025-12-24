@@ -1,0 +1,33 @@
+.buttonClass{
+    background-color: rgb(39, 112, 215);
+    color: white;
+    padding: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonClass:hover{
+    background-color: rgb(26, 90, 173);
+}
+
+.swiper{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.swiper-wrapper{
+    height: 200px;
+    border-radius: 10px;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #667eea;
+    color: white;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: white;
+}

@@ -15,7 +15,7 @@ body {
   padding-left: 320px;
 }
 
-/* SIDEBAR */
+/* Боковая панель */
 .sidebar {
   position: fixed;
   top: 0;
@@ -30,7 +30,7 @@ body {
   padding: 20px;
 }
 
-/* TOP */
+/* верх */
 .sidebar__top {
   display: flex;
   justify-content: space-between;
@@ -42,7 +42,7 @@ body {
   font-size: 20px;
 }
 
-/* ICON BUTTONS */
+/* Кнопки */
 .icon-btn {
   border: none;
   background: #ff3e79;
@@ -59,7 +59,7 @@ body {
   filter: brightness(1.2);
 }
 
-/* MENU */
+/* Менб */
 .menu {
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ body {
   border-radius: 2px;
 }
 
-/* BOTTOM */
+/* Низ */
 .sidebar__bottom {
   display: flex;
   flex-direction: column;
@@ -116,7 +116,7 @@ body {
   margin-top: 5px;
 }
 
-/* LANGS */
+/* Языки */
 .langs span {
   margin-right: 10px;
   cursor: pointer;
