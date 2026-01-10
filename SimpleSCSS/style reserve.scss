@@ -1,0 +1,63 @@
+
+@use "sass:color";
+
+// Variables
+$primary-color: rgb(39, 112, 215);
+$primary-hover: rgb(25, 90, 173);
+$swiper-bg: #677eea;
+
+$border-radius: 5px;
+$swiper-radius: 10px;
+$btn-padding: 10px 20px;
+$swiper-margin: 10px 0;
+
+
+// Mixins
+@mixin button-style {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    padding: $btn-padding;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary-hover;
+    }
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin swiper-slide-styles{
+@include flex-center;
+  background-color: $swiper-bg;
+  color: white;
+}
+
+.buttonClass {
+    @include button-style;
+}
+
+
+.swiper{
+    width: 100%;
+    margin: $swiper-margin;
+
+    &-wrapper{
+        height: 200px;
+        border-radius: $swiper-radius;
+    }
+
+    &-slide{
+        @include swiper-slide-styles; 
+    }
+
+    &-button-prev, &-button-next{
+        color: red;
+    }
+}
+

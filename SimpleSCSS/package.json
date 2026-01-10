@@ -1,0 +1,19 @@
+{
+  "name": "simplescss",
+  "version": "1.0.0",
+  "description": "simple SCSS",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "build-css": "sass style.scss style.css",
+    "watch-css": "sass --watch style.scss:style.css",
+    "dev": "concurrently \"sass --watch style.scss:style.css\" \"python3 -m http.server 800\"", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "sass": "^1.97.2"
+  }
+}
