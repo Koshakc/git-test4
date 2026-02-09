@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Koshakc/git-test4/issues"
   },
-  "homepage": "https://github.com/Koshakc/git-test4#readme"
+  "homepage": "https://github.com/Koshakc/git-test4#readme",
+  "dependencies": {
+    "swiper": "^12.1.0"
+  }
 }
