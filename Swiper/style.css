@@ -73,7 +73,50 @@ body {
   cursor: pointer;
 }
 
+
+.brands_list {
+  max-height: 160px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.brands_list.expanded {
+  max-height: 1000px;
+}
+
+
+.brands_swiper .swiper-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.swiper-pagination {
+  display: none;
+}
+
 /* mobile */
+@media (max-width: 767px) {
+
+  .brands_button {
+    display: none;
+  }
+
+  .brands_swiper .swiper-wrapper {
+    display: flex;
+  }
+
+  .brands_item {
+    width: 240px;
+  }
+
+  .swiper-pagination {
+    display: block;
+    margin-top: 12px;
+  }
+
+}
+
 @media (max-width: 767px) {
   .brands_list {
     grid-template-columns: repeat(2, 1fr);
