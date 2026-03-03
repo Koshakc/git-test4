@@ -31,7 +31,7 @@ body {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
@@ -73,21 +73,17 @@ body {
   cursor: pointer;
 }
 
-
-.brands_list {
-  max-height: 160px;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+.brands_item:nth-child(n+9) {
+  display: none;
 }
 
-.brands_list.expanded {
-  max-height: 1000px;
+.brands_list.expanded .brands_item {
+  display: block;
 }
-
 
 .brands_swiper .swiper-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
