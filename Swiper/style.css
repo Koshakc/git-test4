@@ -1,120 +1,110 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+margin: 0;
+font-family: Arial;
+background: #f8f8f8;
 }
-/* Кнопки Брендов */
+
 .brands {
-  padding: 24px 0;
+padding: 24px 0;
 }
 
 .brands_container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
+max-width: 1200px;
+margin: auto;
+padding: 0 16px;
 }
 
 .brands_title {
-  margin: 0 0 24px;
-  font-size: 22px;
-  font-weight: 700;
+margin-bottom: 24px;
+font-size: 22px;
 }
 
-.brands_list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+.brands_list{
+list-style:none;
+padding:0;
+margin:0;
 }
 
 .brands_item {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+background: white;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .brands_link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 72px;
-  text-decoration: none;
+display:flex;
+align-items:center;
+justify-content:center;
+height:72px;
 }
 
 .brands_link img {
-  max-width: 120px;
-  max-height: 40px;
-  object-fit: contain;
+max-width:120px;
+max-height:40px;
 }
 
-/* hover и focus */
-.brands_link:hover,
-.brands_link:focus-visible {
-  outline: 2px solid #ff6b00;
-  outline-offset: -2px;
+.brands_button{
+margin-top:24px;
+background:none;
+border:none;
+color:#00ddcb;
+cursor:pointer;
+font-weight:600;
 }
 
-.brands_button {
-  margin-top: 24px;
-  padding: 10px 16px;
-  font-size: 14px;
-  border: none;
-  border-radius: 6px;
-  background-color: transparent;
-  color: #00ddcb;
-  cursor: pointer;
+
+.brands_item:nth-child(n+9){
+display:none;
 }
 
-.brands_item:nth-child(n+9) {
-  display: none;
+
+.brands_list.expanded .brands_item{
+display:block;
 }
 
-.brands_list.expanded .brands_item {
-  display: block;
+.swiper-pagination{
+display:none;
 }
 
-.brands_swiper .swiper-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+
+@media (min-width:768px){
+
+.brands_list.swiper-wrapper{
+display:grid !important;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
 }
 
-.swiper-pagination {
-  display: none;
+.brands_item.swiper-slide{
+width:auto !important;
 }
-
-/* mobile */
-@media (max-width: 767px) {
-
-  .brands_button {
-    display: none;
-  }
-
-  .brands_swiper .swiper-wrapper {
-    display: flex;
-  }
-
-  .brands_item {
-    width: 240px;
-  }
-
-  .swiper-pagination {
-    display: block;
-    margin-top: 12px;
-  }
 
 }
 
-@media (max-width: 767px) {
-  .brands_list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+@media (max-width:767px){
+
+.brands_list{
+display:flex;
+}
+
+.brands_item{
+width:240px;
+}
+
+.brands_button{
+display:none;
+}
+
+.swiper-pagination{
+display:block;
+margin-top:16px;
+}
+
 }
