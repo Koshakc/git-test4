@@ -1,117 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Swiper</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brands</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-
 <body>
 
 <section class="brands">
+  <div class="brands__wrap">
 
-<div class="brands_container">
+    <h2 class="brands__title">Ремонт техники различных брендов</h2>
 
-<h2 class="brands_title">
-Ремонт техники различных брендов
-</h2>
+    
+    <div class="brands__swiper swiper">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide"><a href="#" class="brands__card"><img src="https://i.postimg.cc/Y2193cL9/Lenovo.png" alt="Lenovo"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+        <li class="swiper-slide"><a href="#" class="brands__card"><img src="https://i.postimg.cc/SNkK1Zcx/Samsung.png" alt="Samsung"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+        <li class="swiper-slide"><a href="#" class="brands__card"><img src="https://i.postimg.cc/DfqZgV4J/Apple.png" alt="Apple"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+        <li class="swiper-slide"><a href="#" class="brands__card"><img src="https://i.postimg.cc/mZJRPzF9/601e9a38c12422c61c4b5768f512638733afa00e.png" alt="ViewSonic"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+        <li class="swiper-slide"><a href="#" class="brands__card"><img src="https://i.postimg.cc/XNwJ8MBr/Bos.png" alt="Bosch"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+        <li class="swiper-slide"><a href="#" class="brands__card"><img src="https://i.postimg.cc/jqz5XVn2/hp.png" alt="HP"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+        <li class="swiper-slide"><a href="#" class="brands__card"><img src="https://i.postimg.cc/Y2193cLC/acer.png" alt="Acer"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+        <li class="swiper-slide"><a href="#" class="brands__card"><img src="https://i.postimg.cc/Vvxcpp8f/bafbe6b84087624cab73d6c781aa207d18c234da.png" alt="Asus"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+      </ul>
+      <div class="swiper-pagination brands__pagination"></div>
+    </div>
 
-<div class="brands_swiper swiper">
+    
+    <ul class="brands__grid" id="brandsGrid">
+      <li><a href="#" class="brands__card"><img src="https://i.postimg.cc/Y2193cL9/Lenovo.png" alt="Lenovo"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+      <li><a href="#" class="brands__card"><img src="https://i.postimg.cc/SNkK1Zcx/Samsung.png" alt="Samsung"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+      <li><a href="#" class="brands__card"><img src="https://i.postimg.cc/DfqZgV4J/Apple.png" alt="Apple"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+      <li><a href="#" class="brands__card"><img src="https://i.postimg.cc/mZJRPzF9/601e9a38c12422c61c4b5768f512638733afa00e.png" alt="ViewSonic"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+      <li><a href="#" class="brands__card"><img src="https://i.postimg.cc/XNwJ8MBr/Bos.png" alt="Bosch"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+      <li><a href="#" class="brands__card"><img src="https://i.postimg.cc/jqz5XVn2/hp.png" alt="HP"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+      <li><a href="#" class="brands__card"><img src="https://i.postimg.cc/Y2193cLC/acer.png" alt="Acer"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+      <li><a href="#" class="brands__card"><img src="https://i.postimg.cc/Vvxcpp8f/bafbe6b84087624cab73d6c781aa207d18c234da.png" alt="Asus"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+   
+      <li class="brands__extra"><a href="#" class="brands__card"><img src="https://i.postimg.cc/Y2193cL9/Lenovo.png" alt="Lenovo"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+      <li class="brands__extra"><a href="#" class="brands__card"><img src="https://i.postimg.cc/SNkK1Zcx/Samsung.png" alt="Samsung"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+      <li class="brands__extra"><a href="#" class="brands__card"><img src="https://i.postimg.cc/DfqZgV4J/Apple.png" alt="Apple"><span class="brands__circle"><svg viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="#FF3E79" stroke-width="2" stroke-linecap="round"/></svg></span></a></li>
+    </ul>
 
-<ul class="brands_list swiper-wrapper">
+  
+    <button class="brands__btn" id="brandsBtn">
+     
+      <svg class="brands__btn-ico" viewBox="0 0 14 16" fill="none">
+        <path d="M1 1L7 7L13 1" stroke="#FF3E79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 7L7 13L13 7" stroke="#FF3E79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span id="brandsBtnTxt">Показать все</span>
+    </button>
 
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/Y2193cL9/Lenovo.png">
-</a>
-</li>
-
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/SNkK1Zcx/Samsung.png">
-</a>
-</li>
-
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/DfqZgV4J/Apple.png">
-</a>
-</li>
-
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/mZJRPzF9/601e9a38c12422c61c4b5768f512638733afa00e.png">
-</a>
-</li>
-
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/XNwJ8MBr/Bos.png">
-</a>
-</li>
-
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/jqz5XVn2/hp.png">
-</a>
-</li>
-
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/Y2193cLC/acer.png">
-</a>
-</li>
-
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/Vvxcpp8f/bafbe6b84087624cab73d6c781aa207d18c234da.png">
-</a>
-</li>
-
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/Y2193cL9/Lenovo.png">
-</a>
-</li>
-
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/SNkK1Zcx/Samsung.png">
-</a>
-</li>
-
-<li class="brands_item swiper-slide">
-<a href="#" class="brands_link">
-<img src="https://i.postimg.cc/DfqZgV4J/Apple.png">
-</a>
-</li>
-
-</ul>
-
-<div class="swiper-pagination"></div>
-
-</div>
-
-<button class="brands_button">
-Показать все
-</button>
-
-</div>
-
+  </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
-
 </body>
-
 </html>

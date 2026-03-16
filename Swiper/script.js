@@ -1,33 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const button = document.querySelector(".brands_button");
-  const list = document.querySelector(".brands_list");
 
-  button.addEventListener("click", () => {
-    const expanded = list.classList.toggle("expanded");
+  const btn  = document.getElementById("brandsBtn");
+  const grid = document.getElementById("brandsGrid");
+  const txt  = document.getElementById("brandsBtnTxt");
 
-    button.textContent = expanded
-      ? "Скрыть"
-      : "Показать все";
+  btn.addEventListener("click", () => {
+    const isOpen = grid.classList.toggle("open");
+    btn.classList.toggle("open", isOpen);
+    txt.textContent = isOpen ? "Скрыть" : "Показать все";
   });
 
-  new Swiper(".brands_swiper", {
-    slidesPerView: 1.3,
-    spaceBetween: 16,
+ 
+  let swiper = null;
 
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-
-    breakpoints: {
-
-      768: {
-        enabled: false
+  function handleSwiper() {
+    if (window.innerWidth < 768) {
+      if (!swiper) {
+        swiper = new Swiper(".brands__swiper", {
+          slidesPerView: "auto",
+          spaceBetween: 12,
+          pagination: {
+            el: ".brands__pagination",
+            clickable: true,
+          },
+        });
       }
-
+    } else {
+      if (swiper) {
+        swiper.destroy(true, true);
+        swiper = null;
+      }
     }
+  }
 
-  });
+  handleSwiper();
+  window.addEventListener("resize", handleSwiper);
 
 });
