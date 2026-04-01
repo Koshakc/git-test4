@@ -85,9 +85,11 @@ body {
   color: #1C1C1C;
 }
 
+.brands__btn-ico path { stroke: #41F6D7; }
+
 .brands__btn-ico {
   width: 14px;
-  height: 16px;
+  height: 14px;
   flex-shrink: 0;
   transition: transform .2s;
 }

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPS — Услуги и сервисы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ══════════════════════════════════════════
+     MOBILE / TABLET SIDEBAR
+══════════════════════════════════════════ -->
+<aside class="sidebar" id="sidebar" aria-hidden="true" role="dialog" aria-label="Навигация">
+  <div class="sidebar__header">
+    <button class="sidebar__close" id="sidebarClose" aria-label="Закрыть меню">
+      <!-- X icon -->
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <img class="sidebar__logo"
+         src="https://i.postimg.cc/668TV704/image_removebg_preview.png"
+         alt="CPS логотип">
+
+    <button class="sidebar__search-btn" aria-label="Поиск">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+        <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="2"/>
+        <path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <nav class="sidebar__nav" aria-label="Основное меню">
+    <a href="#" class="sidebar__nav-item sidebar__nav-item--active">Ремонт техники</a>
+    <a href="#" class="sidebar__nav-item">Услуги и сервисы</a>
+    <a href="#" class="sidebar__nav-item">Корпоративным клиентам</a>
+    <a href="#" class="sidebar__nav-item">Продавцам техники</a>
+    <a href="#" class="sidebar__nav-item">Партнерам</a>
+    <a href="#" class="sidebar__nav-item">Производителям</a>
+    <a href="#" class="sidebar__nav-item">Наши сервисные центры</a>
+    <a href="#" class="sidebar__nav-item">Контакты</a>
+  </nav>
+
+  <div class="sidebar__footer">
+    <div class="sidebar__actions">
+      <a href="tel:88008908900" class="sidebar__action-btn" aria-label="Позвонить">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <path d="M3.5 2C3.5 2 2 3.5 2 5.5C2 11.3 6.7 16 12.5 16C14.5 16 16 14.5 16 14.5L13.5 12L11.5 13.5C10.2 12.8 8 10.5 7.5 9C8.5 8.5 9.5 7 9.5 7L7.5 5L3.5 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="#" class="sidebar__action-btn" aria-label="Чат">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M5 16L7 13H11L13 16" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="#" class="sidebar__action-btn" aria-label="Личный кабинет">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <circle cx="9" cy="6" r="3" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M3 15C3 12.2 5.7 10 9 10C12.3 10 15 12.2 15 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+    <p class="sidebar__email">mail@cps.com</p>
+    <p class="sidebar__phone">8 800 890 8900</p>
+    <div class="sidebar__langs">
+      <a href="#" class="sidebar__lang sidebar__lang--active">RU</a>
+      <a href="#" class="sidebar__lang">EN</a>
+      <a href="#" class="sidebar__lang">CH</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ══════════════════════════════════════════
+     PAGE WRAPPER
+══════════════════════════════════════════ -->
+<div class="page">
+
+  <!-- MOBILE HEADER -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <button class="header__burger" id="burgerBtn"
+              aria-label="Открыть меню" aria-expanded="false" aria-controls="sidebar">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <path d="M2 4H16M2 9H16M2 14H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <img class="header__logo"
+           src="https://i.postimg.cc/668TV704/image_removebg_preview.png"
+           alt="CPS логотип">
+
+      <div class="header__actions">
+        <button class="header__action-btn" aria-label="Позвонить">
+          <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M3.5 2C3.5 2 2 3.5 2 5.5C2 11.3 6.7 16 12.5 16C14.5 16 16 14.5 16 14.5L13.5 12L11.5 13.5C10.2 12.8 8 10.5 7.5 9C8.5 8.5 9.5 7 9.5 7L7.5 5L3.5 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="header__action-btn" aria-label="Чат">
+          <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M5 16L7 13H11L13 16" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="header__action-btn" aria-label="Профиль">
+          <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <circle cx="9" cy="6" r="3" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M3 15C3 12.2 5.7 10 9 10C12.3 10 15 12.2 15 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="header__action-btn header__action-btn--ghost" aria-label="Инструменты">
+          <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M14 4L10 8M4 14L8 10M10 8L12 6L14 8L10 8ZM8 10L6 12L4 10L8 10Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── LAYOUT ── -->
+  <div class="layout">
+
+    <!-- DESKTOP SIDEBAR -->
+    <aside class="desktop-sidebar" aria-label="Боковое меню">
+      <div class="desktop-sidebar__logo-wrap">
+        <img class="desktop-sidebar__logo"
+             src="https://i.postimg.cc/668TV704/image_removebg_preview.png"
+             alt="CPS логотип">
+      </div>
+
+      <nav class="desktop-sidebar__nav" aria-label="Основное меню">
+        <a href="#" class="desktop-sidebar__nav-item desktop-sidebar__nav-item--active">Ремонт техники</a>
+        <a href="#" class="desktop-sidebar__nav-item">Услуги и сервисы</a>
+        <a href="#" class="desktop-sidebar__nav-item">Корпоративным клиентам</a>
+        <a href="#" class="desktop-sidebar__nav-item">Продавцам техники</a>
+        <a href="#" class="desktop-sidebar__nav-item">Партнерам</a>
+        <a href="#" class="desktop-sidebar__nav-item">Производителям</a>
+        <a href="#" class="desktop-sidebar__nav-item">Наши сервисные центры</a>
+        <a href="#" class="desktop-sidebar__nav-item">Контакты</a>
+      </nav>
+
+      <div class="desktop-sidebar__footer">
+        <div class="desktop-sidebar__actions">
+          <a href="tel:88008908900" class="desktop-sidebar__action-btn" aria-label="Позвонить">
+            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M3.5 2C3.5 2 2 3.5 2 5.5C2 11.3 6.7 16 12.5 16C14.5 16 16 14.5 16 14.5L13.5 12L11.5 13.5C10.2 12.8 8 10.5 7.5 9C8.5 8.5 9.5 7 9.5 7L7.5 5L3.5 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#" class="desktop-sidebar__action-btn" aria-label="Чат">
+            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M5 16L7 13H11L13 16" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#" class="desktop-sidebar__action-btn" aria-label="Личный кабинет">
+            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <circle cx="9" cy="6" r="3" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M3 15C3 12.2 5.7 10 9 10C12.3 10 15 12.2 15 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+        <p class="desktop-sidebar__email">mail@cps.com</p>
+        <p class="desktop-sidebar__phone">8 800 890 8900</p>
+        <div class="desktop-sidebar__langs">
+          <a href="#" class="desktop-sidebar__lang desktop-sidebar__lang--active">RU</a>
+          <a href="#" class="desktop-sidebar__lang">EN</a>
+          <a href="#" class="desktop-sidebar__lang">CH</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main" id="main-content">
+
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+        <h1 class="page-header__title">Услуги и сервисы</h1>
+        <div class="page-header__actions">
+          <a href="#" class="page-header__cta">
+            Оставить заявку
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#" class="page-header__status">
+            Статус ремонта
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7H12M8 3L12 7L8 11" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="tabs" role="tablist" aria-label="Разделы страницы">
+        <ul class="tabs__list">
+          <li class="tabs__item tabs__item--active" role="tab" tabindex="0">Ремонтируемые устройства</li>
+          <li class="tabs__item" role="tab" tabindex="0">Дополнительные услуги</li>
+          <li class="tabs__item" role="tab" tabindex="0">Цены на услуги</li>
+          <li class="tabs__item" role="tab" tabindex="0">Специальные цены</li>
+          <li class="tabs__item" role="tab" tabindex="0">Адреса сервисных центров</li>
+          <li class="tabs__item" role="tab" tabindex="0">Отзывы</li>
+        </ul>
+      </div>
+
+      <!-- INTRO -->
+      <div class="intro">
+        <div class="intro__text">
+          <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+          <p>Мы успешно работаем с 1992 года и заслужили репутацию надёжного партнёра, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что нам обращаются по рекомендации, и в свою очередь, отвечаем на звонки и не ждём своих.</p>
+          <a href="#" class="intro__more">
+            Читать далее
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="intro__image" aria-hidden="true">
+          <img src="https://i.postimg.cc/T1zzgN93/5caedb2bec28084f3de98850700667e14dbc02fd.png"
+               alt="Офис CPS" loading="lazy">
+        </div>
+      </div>
+
+      <!-- ══ BRANDS ══ -->
+      <section class="section brands" aria-labelledby="brands-title">
+        <h2 class="section__title" id="brands-title">Ремонт техники различных брендов</h2>
+
+        <!-- Mobile: horizontal scroll -->
+        <div class="brands__track" aria-hidden="true">
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/Y2193cL9/Lenovo.png" alt="Lenovo"><div class="brand-card__arrow"><!-- → --><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/SNkK1Zcx/Samsung.png" alt="Samsung"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/DfqZgV4J/Apple.png" alt="Apple"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/XNwJ8MBr/Bos.png" alt="Bosch"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/jqz5XVn2/hp.png" alt="HP"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/Y2193cLC/acer.png" alt="Acer"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/mZJRPzF9/601e9a38c12422c61c4b5768f512638733afa00e.png" alt="ViewSonic"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/Vvxcpp8f/bafbe6b84087624cab73d6c781aa207d18c234da.png" alt="Sony"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+        </div>
+
+        <!-- Desktop: grid (6 visible + extras) -->
+        <div class="brands__grid">
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/Y2193cL9/Lenovo.png" alt="Lenovo"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/SNkK1Zcx/Samsung.png" alt="Samsung"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/DfqZgV4J/Apple.png" alt="Apple"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/XNwJ8MBr/Bos.png" alt="Bosch"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/jqz5XVn2/hp.png" alt="HP"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card"><img class="brand-card__img" src="https://i.postimg.cc/Y2193cLC/acer.png" alt="Acer"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <!-- Extra (hidden by default) -->
+          <a href="#" class="brand-card brand-card--extra"><img class="brand-card__img" src="https://i.postimg.cc/mZJRPzF9/601e9a38c12422c61c4b5768f512638733afa00e.png" alt="ViewSonic"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+          <a href="#" class="brand-card brand-card--extra"><img class="brand-card__img" src="https://i.postimg.cc/Vvxcpp8f/bafbe6b84087624cab73d6c781aa207d18c234da.png" alt="Sony"><div class="brand-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+        </div>
+
+        <button class="show-more-btn" id="showMoreBrands" type="button">
+          <svg class="show-more-btn__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="show-more-btn__label">Показать все</span>
+        </button>
+      </section>
+
+      <!-- ══ DEVICES ══ -->
+      <section class="section" aria-labelledby="devices-title">
+        <h2 class="section__title" id="devices-title">Ремонт различных видов техники</h2>
+
+        <!-- Mobile scroll -->
+        <div class="devices__track" aria-hidden="true">
+          <div class="device-card"><span class="device-card__name">Ремонт ноутбуков</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="device-card"><span class="device-card__name">Ремонт планшетов</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="device-card"><span class="device-card__name">Ремонт ПК</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="device-card"><span class="device-card__name">Ремонт мониторов</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        </div>
+
+        <!-- Desktop grid -->
+        <div class="devices__grid">
+          <div class="device-card"><span class="device-card__name">Ремонт ноутбуков</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="device-card"><span class="device-card__name">Ремонт планшетов</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="device-card"><span class="device-card__name">Ремонт ПК</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="device-card"><span class="device-card__name">Ремонт мониторов</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="device-card"><span class="device-card__name">Ремонт принтеров</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="device-card"><span class="device-card__name">Ремонт телевизоров</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <!-- Extra -->
+          <div class="device-card device-card--extra"><span class="device-card__name">Ремонт смартфонов</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          <div class="device-card device-card--extra"><span class="device-card__name">Ремонт проекторов</span><div class="device-card__arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6H11M7 2L11 6L7 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        </div>
+
+        <button class="show-more-btn" id="showMoreDevices" type="button">
+          <svg class="show-more-btn__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="show-more-btn__label">Показать все</span>
+        </button>
+      </section>
+
+      <!-- ══ PRICING ══ -->
+      <section class="section" aria-labelledby="pricing-title">
+        <h2 class="section__title" id="pricing-title">Цены на услуги</h2>
+
+        <table class="pricing__table" aria-label="Таблица цен на ремонтные услуги">
+          <thead class="pricing__thead">
+            <tr>
+              <th scope="col">Ремонтные услуги</th>
+              <th scope="col">Цена</th>
+              <th scope="col">Срок</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody class="pricing__tbody">
+            <tr class="pricing__row">
+              <td class="pricing__service-name">Диагностика</td>
+              <div class="pricing__meta">
+                <span class="pricing__price">Бесплатно</span>
+                <span class="pricing__time">30 мин</span>
+                <button class="pricing__order-btn" type="button">ЗАКАЗАТЬ <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6H11M7 2L11 6L7 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </tr>
+            <tr class="pricing__row">
+              <td class="pricing__service-name">Замена дисплея</td>
+              <div class="pricing__meta">
+                <span class="pricing__price">1 000 ₽</span>
+                <span class="pricing__time">30–120 мин</span>
+                <button class="pricing__order-btn" type="button">ЗАКАЗАТЬ <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6H11M7 2L11 6L7 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </tr>
+            <tr class="pricing__row">
+              <td class="pricing__service-name">Замена полифонического динамика</td>
+              <div class="pricing__meta">
+                <span class="pricing__price">1 000 ₽</span>
+                <span class="pricing__time">30–120 мин</span>
+                <button class="pricing__order-btn" type="button">ЗАКАЗАТЬ <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6H11M7 2L11 6L7 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </tr>
+            <tr class="pricing__row">
+              <td class="pricing__service-name">Тестирование с выдачей технического заключения</td>
+              <div class="pricing__meta">
+                <span class="pricing__price">1 000 ₽</span>
+                <span class="pricing__time">30–120 мин</span>
+                <button class="pricing__order-btn" type="button">ЗАКАЗАТЬ <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6H11M7 2L11 6L7 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </tr>
+            <tr class="pricing__row">
+              <td class="pricing__service-name">Замена программного обеспечения</td>
+              <div class="pricing__meta">
+                <span class="pricing__price">1 000 ₽</span>
+                <span class="pricing__time">30–120 мин</span>
+                <button class="pricing__order-btn" type="button">ЗАКАЗАТЬ <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6H11M7 2L11 6L7 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="pricing__note">Все цены указаны с учётом НДС. Стоимость ремонта указана на единицу услуги. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+        <a href="#" class="pricing__proposal">
+          Получить коммерческое предложение
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer__top">
+          <span class="footer__copy">© 2019 CPS</span>
+          <span class="footer__copy">Разработано командой Aresong</span>
+        </div>
+        <a href="#" class="footer__link">Политика конфиденциальности</a>
+        <p class="footer__disclaimer">Информация, размещённая на данной странице, не является публичной офертой.</p>
+      </footer>
+
+    </main>
+  </div><!-- /layout -->
+</div><!-- /page -->
+
+<script src="js/main.js"></script>
+</body>
+</html>
