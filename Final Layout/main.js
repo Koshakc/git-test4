@@ -1,13 +1,7 @@
-/**
- * CPS — main.js
- * Handles: mobile menu, tabs, show-more toggles
- */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ─────────────────────────────────────────
-     MOBILE MENU
-  ───────────────────────────────────────── */
+
   const burgerBtn    = document.getElementById('burgerBtn');
   const sidebar      = document.getElementById('sidebar');
   const sidebarClose = document.getElementById('sidebarClose');
@@ -18,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sidebar.setAttribute('aria-hidden', 'false');
     navOverlay.classList.add('nav-overlay--active');
     document.body.style.overflow = 'hidden';
-    burgerBtn.setAttribute('aria-expanded', 'true');
+    if (burgerBtn) burgerBtn.setAttribute('aria-expanded', 'true');
   }
 
   function closeMenu() {
@@ -26,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sidebar.setAttribute('aria-hidden', 'true');
     navOverlay.classList.remove('nav-overlay--active');
     document.body.style.overflow = '';
-    burgerBtn.setAttribute('aria-expanded', 'false');
+    if (burgerBtn) burgerBtn.setAttribute('aria-expanded', 'false');
   }
 
   if (burgerBtn)    burgerBtn.addEventListener('click', openMenu);
@@ -35,9 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 
 
-  /* ─────────────────────────────────────────
-     TABS
-  ───────────────────────────────────────── */
+
   const tabItems = document.querySelectorAll('.tabs__item');
   tabItems.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -47,9 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ─────────────────────────────────────────
-     SHOW MORE — helper
-  ───────────────────────────────────────── */
+
   function initShowMore(btnId, extraSelector, labelExpand = 'Показать все', labelCollapse = 'Скрыть') {
     const btn = document.getElementById(btnId);
     if (!btn) return;
